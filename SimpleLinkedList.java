@@ -93,20 +93,19 @@ public class SimpleLinkedList<V> implements List<V>{
         return -1;
     }
     
-    @Override
+      @Override
     public ListIterator<V> listIterator() {
         ListIterator<V> listIterator = new ListIterator<V>() {
-            Node<V> prevNode= head;
-            node<V> nextNode = auxNode.getNext();
+            Node<V> auxNode= head;
             int nextIndex =0;
 
             public boolean hasNext(){
                 return auxNode!= null;
             }
 
-            public V next(){
-                V value = prevNode.getValue();
-                prevNode = prevNode.getNext();
+            public V nexT(){
+                V value = auxNode.getValue();
+                auxNode = auxNode.getNext();
                 nextIndex++;
                 return value;   
 
